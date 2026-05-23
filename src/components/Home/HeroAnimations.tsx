@@ -10,7 +10,7 @@ export default function HeroAnimations({ onCtaClick }: HeroAnimationsProps) {
     return (
         <div className="relative w-full h-full flex flex-col justify-between z-10">
             {/* Main Content */}
-            <div className="flex-1 flex flex-col justify-between px-6 md:px-12 lg:px-16 xl:px-24 pt-24 lg:pt-28 pb-12 lg:pb-16">
+            <div className="flex-1 flex flex-col justify-between px-6 md:px-12 lg:px-16 xl:px-24 pt-32 lg:pt-40 pb-14 lg:pb-16">
                 {/* Large Typography + Right side text */}
                 <div className="relative">
                     {/* connect */}
@@ -18,18 +18,18 @@ export default function HeroAnimations({ onCtaClick }: HeroAnimationsProps) {
                         initial={{ opacity: 0, y: 40 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-                        className="font-nexa font-bold text-black text-[4.5rem] md:text-[6.5rem] lg:text-[8rem] xl:text-[10rem] 2xl:text-[13rem] leading-[0.9] tracking-tight lowercase"
+                        className="font-nexa font-bold text-black text-[5.5rem] md:text-[8rem] lg:text-[10rem] xl:text-[13rem] 2xl:text-[16rem] leading-[0.9] tracking-tight lowercase"
                     >
                         connect
                     </motion.h1>
 
                     {/* create + side text */}
-                    <div className="relative -mt-3 md:-mt-5 lg:-mt-6 xl:-mt-8 2xl:-mt-12">
+                    <div className="relative -mt-4 md:-mt-6 lg:-mt-8 xl:-mt-10 2xl:-mt-14">
                         <motion.h1
                             initial={{ opacity: 0, y: 40 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
-                            className="font-nexa font-light text-black text-[4.5rem] md:text-[6.5rem] lg:text-[8rem] xl:text-[10rem] 2xl:text-[13rem] leading-[0.9] tracking-tight lowercase"
+                            className="font-nexa font-light text-black text-[5.5rem] md:text-[8rem] lg:text-[10rem] xl:text-[13rem] 2xl:text-[16rem] leading-[0.9] tracking-tight lowercase"
                         >
                             create
                         </motion.h1>
@@ -38,7 +38,7 @@ export default function HeroAnimations({ onCtaClick }: HeroAnimationsProps) {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.7, delay: 0.5 }}
-                            className="hidden md:block absolute bottom-[20px] lg:bottom-[28px] xl:bottom-[32px] left-[340px] md:left-[380px] lg:left-[460px] xl:left-[580px] 2xl:left-[700px] font-nexa text-black text-sm lg:text-base xl:text-lg 2xl:text-xl max-w-[240px] lg:max-w-[280px] xl:max-w-[320px] 2xl:max-w-[380px] leading-snug"
+                            className="hidden md:block absolute bottom-[30px] lg:bottom-[35px] xl:bottom-[40px] left-[400px] md:left-[460px] lg:left-[560px] xl:left-[700px] 2xl:left-[840px] font-nexa text-black text-base lg:text-lg xl:text-xl 2xl:text-2xl max-w-[260px] lg:max-w-[300px] xl:max-w-[360px] 2xl:max-w-[420px] leading-snug"
                         >
                             Unlock your brand&apos;s potential with our proven marketing expertise.{" "}
                             <span className="font-bold">From strategy to execution, we drive growth.</span>
@@ -46,12 +46,12 @@ export default function HeroAnimations({ onCtaClick }: HeroAnimationsProps) {
                     </div>
 
                     {/* captivate */}
-                    <div className="relative -mt-3 md:-mt-5 lg:-mt-6 xl:-mt-8 2xl:-mt-12">
+                    <div className="relative -mt-4 md:-mt-6 lg:-mt-8 xl:-mt-10 2xl:-mt-14">
                         <motion.h1
                             initial={{ opacity: 0, y: 40 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-                            className="font-nexa font-bold text-black text-[4.5rem] md:text-[6.5rem] lg:text-[8rem] xl:text-[10rem] 2xl:text-[13rem] leading-[0.9] tracking-tight lowercase"
+                            className="font-nexa font-bold text-black text-[5.5rem] md:text-[8rem] lg:text-[10rem] xl:text-[13rem] 2xl:text-[16rem] leading-[0.9] tracking-tight lowercase"
                         >
                             captivate
                         </motion.h1>
