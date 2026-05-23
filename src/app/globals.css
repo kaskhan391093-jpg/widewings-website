@@ -1,0 +1,211 @@
+@import "tailwindcss";
+
+/* =========================
+  Fonts
+========================= */
+
+@theme {
+    --breakpoint-3xl: 2350px;
+    --font-nexa: var(--font-nexa);
+    --font-body: var(--font-body);
+    --font-calibri: var(--font-calibri);
+    --animate-fade-in: fadeIn 0.4s ease-out forwards;
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(-5px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+
+/* Display */
+.font-hero {
+    font-family: var(--font-nexa);
+    font-weight: 900;
+}
+
+.font-hero-accent {
+    font-family: var(--font-nexa);
+    font-weight: 800;
+}
+
+/* Titles */
+.font-section-title {
+    font-family: var(--font-nexa);
+    font-weight: 700;
+}
+
+/* UI */
+.font-ui {
+    font-family: var(--font-nexa);
+    font-weight: 400;
+}
+
+.font-ui-muted {
+    font-family: var(--font-nexa);
+    font-weight: 300;
+}
+
+/* Body */
+.font-body {
+    font-family: var(--font-body);
+    font-weight: 400;
+}
+
+.font-calibri {
+    font-family: var(--font-calibri);
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.animate-scroll {
+    animation: scroll 30s linear infinite;
+}
+
+@media (min-width: 1920px) {
+    .bottom-3xl-custom {
+        bottom: 9%;
+    }
+}
+
+@media (min-width: 2550px) {
+    .bottom-3xl-custom {
+        bottom: 15%;
+    }
+}
+
+@media (min-width: 2000px) {
+    .bottom-3xl-custom-paddings {
+        padding-top: 10rem;
+    }
+}
+
+@plugin "@tailwindcss/typography";
+
+/* WordPress Content Compatibility Layer */
+@layer components {
+    .wp-content {
+        @apply prose prose-lg max-w-none text-[#2E2E62]/90 font-nexa leading-snug;
+
+        /* Headings */
+        @apply prose-headings:font-nexa prose-headings:font-bold prose-headings:text-[#2E2E62] prose-headings:mb-2 prose-headings:mt-6;
+
+        /* Text Elements */
+        @apply prose-p:mb-3 prose-p:leading-normal;
+        @apply prose-strong:text-[#2E2E62] prose-strong:font-bold;
+        @apply prose-a:text-inherit prose-a:no-underline hover:prose-a:text-inherit;
+        @apply prose-blockquote:border-l-4 prose-blockquote:border-[#FFCF01] prose-blockquote:bg-gray-50 prose-blockquote:py-2 prose-blockquote:px-4 prose-blockquote:rounded-r-lg prose-blockquote:not-italic prose-blockquote:my-4;
+
+        /* Lists */
+        @apply prose-ul:my-2 prose-ul:list-disc prose-ul:pl-5;
+        @apply prose-ol:my-2 prose-ol:list-decimal prose-ol:pl-5;
+        @apply prose-li:mb-1 prose-li:marker:text-[#FFCF01];
+
+        /* Media */
+        @apply prose-img:rounded-3xl prose-img:shadow-md prose-img:my-4 prose-img:w-full prose-img:object-cover;
+        @apply prose-video:rounded-3xl prose-video:shadow-md prose-video:my-4;
+
+        /* Tables (Fixed continuous header) */
+        @apply prose-table:overflow-hidden prose-table:rounded-xl  prose-table:my-6;
+        @apply prose-thead:bg-[#2E2E62] prose-thead:text-white;
+        @apply prose-th:text-white prose-th:p-3 prose-th:font-bold prose-th:text-sm prose-th:tracking-wide prose-th:align-middle;
+        @apply prose-td:p-3  prose-td:text-sm prose-td:align-top;
+
+        /* FAQ & Accordions (Native & WP Blocks) */
+        & details {
+            @apply border border-gray-100 rounded-2xl mb-4 overflow-hidden bg-white shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] transition-all duration-300 ring-1 ring-black/5;
+        }
+
+        & details[open] {
+            @apply ring-[#FFCF01]/30 shadow-md transform-none;
+        }
+
+        & summary {
+            @apply flex items-center justify-between cursor-pointer p-0 font-bold text-[#2E2E62] bg-white transition-all list-none select-none;
+        }
+
+        & summary::-webkit-details-marker {
+            display: none;
+        }
+
+        /* Prevent ALL WordPress plugin icons from showing in summary */
+        & summary img,
+        & summary svg,
+        & summary i,
+        & summary [class*="icon"],
+        & summary [class*="arrow"] {
+            @apply inline-block! m-0! shadow-none! shrink-0!;
+            display: none !important;
+        }
+
+        & details[open] summary {
+            @apply border-b border-gray-50;
+        }
+
+        & details > *:not(summary) {
+            @apply px-6 py-5 text-[#2E2E62]/90 leading-relaxed bg-white text-base;
+            animation: fadeIn 0.4s ease-out forwards;
+        }
+
+        /* Elementor Accordion Fallback Hiding */
+        .elementor-tab-title img,
+        .elementor-tab-title svg,
+        .elementor-tab-title i,
+        .elementor-accordion-icon {
+            display: none !important;
+        }
+
+        /* Yoast / Generic FAQ Fallback */
+        .schema-faq-section,
+        .wp-block-yoast-faq-block {
+            @apply space-y-2 my-4;
+        }
+
+        .schema-faq-question {
+            @apply font-bold text-[#2E2E62] text-base mb-1 block cursor-pointer;
+        }
+
+        .schema-faq-answer {
+            @apply pl-4 border-l-2 border-[#FFCF01] mb-4 text-gray-600 text-sm;
+        }
+    }
+
+    /* WP Specific Alignment Classes */
+    .wp-content .alignleft {
+        @apply md:float-left md:mr-8 md:mb-6 md:max-w-[50%];
+    }
+
+    .wp-content .alignright {
+        @apply md:float-right md:ml-8 md:mb-6 md:max-w-[50%];
+    }
+
+    .wp-content .aligncenter {
+        @apply mx-auto block;
+    }
+
+    /* WP Captions */
+    .wp-content .wp-caption {
+        @apply mb-10 max-w-full;
+    }
+
+    .wp-content .wp-caption-text {
+        @apply text-center text-sm text-gray-500 mt-3 italic;
+    }
+
+    /* WP Buttons */
+    .wp-content .wp-block-button__link {
+        @apply inline-block bg-[#2E2E62] text-white px-8 py-4 rounded-full font-bold transition-all hover:bg-[#FFCF01] hover:text-[#2E2E62] no-underline shadow-lg hover:shadow-xl hover:-translate-y-1;
+    }
+}

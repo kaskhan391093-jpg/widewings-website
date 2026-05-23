@@ -1,0 +1,104 @@
+"use client";
+
+import { motion } from "framer-motion";
+
+interface HeroAnimationsProps {
+    onCtaClick: () => void;
+}
+
+export default function HeroAnimations({ onCtaClick }: HeroAnimationsProps) {
+    return (
+        <div className="relative w-full h-full flex flex-col justify-between z-10">
+            {/* Main Content */}
+            <div className="flex-1 flex flex-col justify-center px-6 md:px-12 lg:px-16 xl:px-24 pt-32 lg:pt-40">
+                {/* Large Typography + Right side text */}
+                <div className="relative">
+                    {/* connect */}
+                    <motion.h1
+                        initial={{ opacity: 0, y: 40 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+                        className="font-nexa font-bold text-black text-[5.5rem] md:text-[8rem] lg:text-[10rem] xl:text-[13rem] 2xl:text-[16rem] leading-[0.9] tracking-tight lowercase"
+                    >
+                        connect
+                    </motion.h1>
+
+                    {/* create + side text */}
+                    <div className="relative -mt-4 md:-mt-6 lg:-mt-8 xl:-mt-10 2xl:-mt-14">
+                        <motion.h1
+                            initial={{ opacity: 0, y: 40 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.8, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
+                            className="font-nexa font-light text-black text-[5.5rem] md:text-[8rem] lg:text-[10rem] xl:text-[13rem] 2xl:text-[16rem] leading-[0.9] tracking-tight lowercase"
+                        >
+                            create
+                        </motion.h1>
+
+                        <motion.p
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.7, delay: 0.5 }}
+                            className="hidden md:block absolute bottom-[30px] lg:bottom-[35px] xl:bottom-[40px] left-[400px] md:left-[460px] lg:left-[560px] xl:left-[700px] 2xl:left-[840px] font-nexa text-black text-base lg:text-lg xl:text-xl 2xl:text-2xl max-w-[260px] lg:max-w-[300px] xl:max-w-[360px] 2xl:max-w-[420px] leading-snug"
+                        >
+                            Unlock your brand&apos;s potential with our proven marketing expertise.{" "}
+                            <span className="font-bold">From strategy to execution, we drive growth.</span>
+                        </motion.p>
+                    </div>
+
+                    {/* captivate + play button */}
+                    <div className="relative">
+                        <motion.h1
+                            initial={{ opacity: 0, y: 40 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.8, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
+                            className="font-nexa font-bold text-black text-[5.5rem] md:text-[8rem] lg:text-[10rem] xl:text-[13rem] 2xl:text-[16rem] leading-[0.9] tracking-tight lowercase"
+                        >
+                            captivate
+                        </motion.h1>
+
+                    </div>
+                </div>
+
+                {/* Bottom row: buttons + description */}
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.7, delay: 0.6 }}
+                    className="flex flex-col md:flex-row items-start md:items-end justify-between gap-6 mt-8 lg:mt-12"
+                >
+                    {/* Left: CTA buttons */}
+                    <div className="flex items-center gap-4 lg:gap-6">
+                        <motion.button
+                            onClick={onCtaClick}
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                            className="bg-black text-white font-nexa font-bold text-lg lg:text-xl xl:text-2xl px-8 lg:px-10 xl:px-12 pt-4 pb-3 lg:pt-5 lg:pb-3.5 xl:pt-6 xl:pb-4.5 rounded-full inline-flex items-center gap-3 cursor-pointer"
+                        >
+                            Let&apos;s Talk
+                            <svg className="w-5 h-5 lg:w-6 lg:h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                                <path d="M7 17L17 7M17 7H7M17 7V17" />
+                            </svg>
+                        </motion.button>
+
+                        <button className="flex items-center gap-3 cursor-pointer group">
+                            <span className="w-14 h-14 lg:w-16 lg:h-16 rounded-full border-[2.5px] border-black/80 flex items-center justify-center group-hover:border-black transition-colors">
+                                <svg className="w-5 h-5 lg:w-6 lg:h-6 text-black/80 ml-0.5" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5v14l11-7z" />
+                                </svg>
+                            </span>
+                            <span className="font-nexa font-medium text-black/80 text-lg lg:text-xl xl:text-2xl group-hover:text-black transition-colors">
+                                Watch Showreel
+                            </span>
+                        </button>
+                    </div>
+
+                    {/* Right: Agency description */}
+                    <p className="font-nexa text-black text-sm lg:text-base xl:text-lg 2xl:text-xl max-w-lg xl:max-w-xl 2xl:max-w-2xl leading-relaxed">
+                        We are a full-service, 360° marketing agency based in the Middle East, with active operations across the UAE, Saudi Arabia, and Egypt. Located in Dubai, supported by a skilled team operating between the UAE and Egypt.
+                    </p>
+                </motion.div>
+            </div>
+
+        </div>
+    );
+}
