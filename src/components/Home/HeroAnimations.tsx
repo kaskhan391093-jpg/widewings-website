@@ -24,7 +24,7 @@ export default function HeroAnimations({ onCtaClick }: HeroAnimationsProps) {
                     </motion.h1>
 
                     {/* create + side text */}
-                    <div className="relative -mt-4 md:-mt-6 lg:-mt-8 xl:-mt-10 2xl:-mt-14">
+                    <div className="relative -mt-8 md:-mt-12 lg:-mt-16 xl:-mt-20 2xl:-mt-28">
                         <motion.h1
                             initial={{ opacity: 0, y: 40 }}
                             animate={{ opacity: 1, y: 0 }}
@@ -46,7 +46,7 @@ export default function HeroAnimations({ onCtaClick }: HeroAnimationsProps) {
                     </div>
 
                     {/* captivate */}
-                    <div className="relative -mt-4 md:-mt-6 lg:-mt-8 xl:-mt-10 2xl:-mt-14">
+                    <div className="relative -mt-8 md:-mt-12 lg:-mt-16 xl:-mt-20 2xl:-mt-28">
                         <motion.h1
                             initial={{ opacity: 0, y: 40 }}
                             animate={{ opacity: 1, y: 0 }}
