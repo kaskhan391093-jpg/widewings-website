@@ -70,7 +70,7 @@ export default function Header() {
         <header className="absolute top-0 left-0 right-0 w-full z-100">
             <div className="flex items-center justify-between px-6 lg:px-12 xl:px-16 py-4 lg:py-6">
                 {/* Logo */}
-                <Link href="/" className="relative h-16 lg:h-20 xl:h-24 w-auto aspect-[3/1] block">
+                <Link href="/" className="relative h-12 lg:h-14 xl:h-16 w-auto aspect-[3/1] block">
                     <Image
                         src="/Logo.webp"
                         alt="Wide Wings Media Home"
@@ -84,7 +84,7 @@ export default function Header() {
                 <div className="flex items-center gap-3 lg:gap-4">
                     <Link
                         href="/contact-us/"
-                        className="bg-black text-white font-nexa font-bold text-lg lg:text-xl xl:text-2xl px-8 lg:px-10 xl:px-12 pt-4 pb-3 lg:pt-5 lg:pb-3.5 xl:pt-6 xl:pb-4.5 rounded-full inline-flex items-center gap-3 hover:bg-black/85 transition-colors"
+                        className="bg-black text-white font-nexa font-bold text-sm lg:text-base xl:text-lg px-5 lg:px-7 xl:px-9 pt-2.5 pb-2 lg:pt-3 lg:pb-2.5 xl:pt-3.5 xl:pb-3 rounded-full inline-flex items-center gap-2 hover:bg-black/85 transition-colors"
                     >
                         Let&apos;s Talk
                         <svg className="w-5 h-5 lg:w-6 lg:h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
@@ -95,7 +95,7 @@ export default function Header() {
                     <button
                         ref={toggleRef}
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
-                        className="w-14 h-14 lg:w-16 lg:h-16 xl:w-18 xl:h-18 rounded-full border-[2.5px] border-black/80 flex items-center justify-center hover:border-black transition-colors cursor-pointer"
+                        className="w-10 h-10 lg:w-11 lg:h-11 xl:w-12 xl:h-12 rounded-full border-[2px] border-black/80 flex items-center justify-center hover:border-black transition-colors cursor-pointer"
                         aria-label={isMenuOpen ? "Close menu" : "Open menu"}
                         aria-expanded={isMenuOpen}
                         aria-controls="mobile-menu"

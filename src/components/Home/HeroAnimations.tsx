@@ -10,7 +10,7 @@ export default function HeroAnimations({ onCtaClick }: HeroAnimationsProps) {
     return (
         <div className="relative w-full h-full flex flex-col justify-between z-10">
             {/* Main Content */}
-            <div className="flex-1 flex flex-col justify-center px-6 md:px-12 lg:px-16 xl:px-24 pt-32 lg:pt-40">
+            <div className="flex-1 flex flex-col justify-center px-6 md:px-12 lg:px-16 xl:px-24 pt-32 lg:pt-40 pb-10 lg:pb-14">
                 {/* Large Typography + Right side text */}
                 <div className="relative">
                     {/* connect */}
@@ -72,7 +72,7 @@ export default function HeroAnimations({ onCtaClick }: HeroAnimationsProps) {
                             onClick={onCtaClick}
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
-                            className="bg-black text-white font-nexa font-bold text-lg lg:text-xl xl:text-2xl px-8 lg:px-10 xl:px-12 pt-4 pb-3 lg:pt-5 lg:pb-3.5 xl:pt-6 xl:pb-4.5 rounded-full inline-flex items-center gap-3 cursor-pointer"
+                            className="bg-black text-white font-nexa font-bold text-base lg:text-lg xl:text-xl px-6 lg:px-8 xl:px-10 pt-3 pb-2.5 lg:pt-4 lg:pb-3 xl:pt-4.5 xl:pb-3.5 rounded-full inline-flex items-center gap-3 cursor-pointer"
                         >
                             Let&apos;s Talk
                             <svg className="w-5 h-5 lg:w-6 lg:h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
@@ -81,12 +81,12 @@ export default function HeroAnimations({ onCtaClick }: HeroAnimationsProps) {
                         </motion.button>
 
                         <button className="flex items-center gap-3 cursor-pointer group">
-                            <span className="w-14 h-14 lg:w-16 lg:h-16 rounded-full border-[2.5px] border-black/80 flex items-center justify-center group-hover:border-black transition-colors">
+                            <span className="w-11 h-11 lg:w-12 lg:h-12 rounded-full border-[2px] border-black/80 flex items-center justify-center group-hover:border-black transition-colors">
                                 <svg className="w-5 h-5 lg:w-6 lg:h-6 text-black/80 ml-0.5" viewBox="0 0 24 24" fill="currentColor">
                                     <path d="M8 5v14l11-7z" />
                                 </svg>
                             </span>
-                            <span className="font-nexa font-medium text-black/80 text-lg lg:text-xl xl:text-2xl group-hover:text-black transition-colors">
+                            <span className="font-nexa font-medium text-black/80 text-base lg:text-lg xl:text-xl group-hover:text-black transition-colors">
                                 Watch Showreel
                             </span>
                         </button>
