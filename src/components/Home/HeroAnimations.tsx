@@ -10,7 +10,7 @@ export default function HeroAnimations({ onCtaClick }: HeroAnimationsProps) {
     return (
         <div className="relative w-full h-full flex flex-col justify-between z-10">
             {/* Main Content */}
-            <div className="flex-1 flex flex-col justify-center px-6 md:px-12 lg:px-16 xl:px-24 pt-32 lg:pt-40 pb-10 lg:pb-14">
+            <div className="flex-1 flex flex-col justify-center px-6 md:px-12 lg:px-16 xl:px-24 pt-32 lg:pt-40 pb-24 lg:pb-28">
                 {/* Large Typography + Right side text */}
                 <div className="relative">
                     {/* connect */}
