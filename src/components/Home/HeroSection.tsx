@@ -17,7 +17,7 @@ export default function HeroSection() {
 
     return (
         <>
-            <section className="relative w-full h-screen flex flex-col overflow-hidden bg-[#f5f5f5]">
+            <section className="relative w-full min-h-screen flex flex-col overflow-hidden bg-[#f5f5f5]">
                 <HeroAnimations onCtaClick={openContactModal} />
 
                 {/* Gradient blob */}

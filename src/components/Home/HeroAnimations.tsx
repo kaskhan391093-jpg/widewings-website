@@ -10,7 +10,7 @@ export default function HeroAnimations({ onCtaClick }: HeroAnimationsProps) {
     return (
         <div className="relative w-full h-full flex flex-col justify-between z-10">
             {/* Main Content */}
-            <div className="flex-1 flex flex-col justify-center px-6 md:px-12 lg:px-16 xl:px-24 pt-32 lg:pt-40 pb-24 lg:pb-28">
+            <div className="flex-1 flex flex-col justify-between px-6 md:px-12 lg:px-16 xl:px-24 pt-32 lg:pt-36 pb-16 lg:pb-20">
                 {/* Large Typography + Right side text */}
                 <div className="relative">
                     {/* connect */}
@@ -64,7 +64,7 @@ export default function HeroAnimations({ onCtaClick }: HeroAnimationsProps) {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.7, delay: 0.6 }}
-                    className="flex flex-col md:flex-row items-start md:items-end justify-between gap-6 mt-8 lg:mt-12"
+                    className="flex flex-col md:flex-row items-start md:items-end justify-between gap-6"
                 >
                     {/* Left: CTA buttons */}
                     <div className="flex items-center gap-4 lg:gap-6">
